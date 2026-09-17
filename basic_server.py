@@ -18,4 +18,6 @@ while True:
     #FORMATTING
 
     sentenceCapitalized = sentence.upper()
-    connectionSocket.send(sentenceCapitalized.encode())
+    connectionSocket.send(sentenceCapitalized.encode()) #Encode and send response to client
+
+    connectionSocket.close()
