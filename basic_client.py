@@ -12,8 +12,8 @@ clientSocket.connect((serverName, serverPort)) #Connect client to server
 
 sentence = input('Enter lowercase sentence:') #Ask the user for a msg
 clientSocket.send(sentence.encode())
-modifiedSentence = clientSocket.recv(1024).decode #Recieve and decode the server
+sentenceModified = clientSocket.recv(1024).decode() #Recieve and decode the server
 
-print('From Server:', modifiedSentence) #Display the server's reponse
+print('From Server:', sentenceModified) #Display the server's reponse
 
 clientSocket.close()

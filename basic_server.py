@@ -7,6 +7,7 @@ serverSocket = socket(AF_INET, SOCK_STREAM) #Create TCP Socket using IPv4
 serverSocket.bind(('', serverPort)) #Bind the server socket to port num
 
 #LISTENING 
+
 serverSocket.listen(1) #Listen for client connections
 print('The server is ready to recieve') #Confirm the server is running
 
@@ -18,6 +19,9 @@ while True:
     #FORMATTING
 
     sentenceCapitalized = sentence.upper()
+
+    #SEND RESPONSE MSG
+
     connectionSocket.send(sentenceCapitalized.encode()) #Encode and send response to client
 
     connectionSocket.close()
